@@ -1,0 +1,12 @@
+D:\UDB\2024\CICLO II\DSP\lab\Ejemplo1\Ejemplo1\bin\Debug\Ejemplo1.exe.config
+D:\UDB\2024\CICLO II\DSP\lab\Ejemplo1\Ejemplo1\bin\Debug\Ejemplo1.exe
+D:\UDB\2024\CICLO II\DSP\lab\Ejemplo1\Ejemplo1\bin\Debug\Ejemplo1.pdb
+D:\UDB\2024\CICLO II\DSP\lab\Ejemplo1\Ejemplo1\obj\Debug\Ejemplo1.csprojAssemblyReference.cache
+D:\UDB\2024\CICLO II\DSP\lab\Ejemplo1\Ejemplo1\obj\Debug\Ejemplo1.Form1.resources
+D:\UDB\2024\CICLO II\DSP\lab\Ejemplo1\Ejemplo1\obj\Debug\Ejemplo1.Properties.Resources.resources
+D:\UDB\2024\CICLO II\DSP\lab\Ejemplo1\Ejemplo1\obj\Debug\Ejemplo1.csproj.GenerateResource.cache
+D:\UDB\2024\CICLO II\DSP\lab\Ejemplo1\Ejemplo1\obj\Debug\Ejemplo1.csproj.CoreCompileInputs.cache
+D:\UDB\2024\CICLO II\DSP\lab\Ejemplo1\Ejemplo1\obj\Debug\Ejemplo1.exe
+D:\UDB\2024\CICLO II\DSP\lab\Ejemplo1\Ejemplo1\obj\Debug\Ejemplo1.pdb
+D:\UDB\2024\CICLO II\DSP\lab\Ejemplo1\Ejemplo1\obj\Debug\Ejemplo1.Form2.resources
+D:\UDB\2024\CICLO II\DSP\lab\Ejemplo1\Ejemplo1\obj\Debug\Ejemplo1.Form3.resources
