@@ -224,3 +224,104 @@ private void exit_Click(object sender, EventArgs e)
     cuentadif.Visible = false;
 }
 
+
+private void retiroexit_Click(object sender, EventArgs e)
+{
+
+}
+
+private void regresarbtn_Click(object sender, EventArgs e)
+{
+    textBox2.Visible = false;
+    textodeco.Visible = false;
+    btnretirar.Visible = false;
+    fondos.Visible = true;
+    transferir.Visible = true;
+    Cosignacion.Visible = true;
+    saldo.Visible = true;
+    exit.Visible = true;
+    lblbienvenido.Visible = true;
+    retiroexit.Visible = false;
+    regresarbtn.Visible = false;
+    cuentadif.Visible = true;
+}
+
+private void consignacionbtn_TextChanged(object sender, EventArgs e)
+{
+    // Intenta convertir el texto ingresado en un número decimal
+    if (decimal.TryParse(consignacionbtn.Text, out decimal amount))
+    {
+        Depositocuenta = amount;
+    }
+    else
+    {
+        // Si la conversión falla, resetea amountToDeposit
+        Depositocuenta = 0;
+        MessageBox.Show("Por favor, ingrese una cantidad válida para consignar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+    }
+}
+
+private void consglbl_Click(object sender, EventArgs e)
+{
+
+}
+
+private void consigbtn_Click(object sender, EventArgs e)
+{
+    if (int.TryParse(textBox1.Text, out int accountNumber) && accountBalances.ContainsKey(accountNumber))
+    {
+        if (Depositocuenta > 0)
+        {
+            // Suma la cantidad depositada al saldo de la cuenta                
+            saldoconsult.Visible = false;
+            textodeco.Visible = false;
+            accountBalances[accountNumber] += Depositocuenta;
+            saldoconsult.Visible = false;
+            lblbienvenido.Visible = false;
+            exit.Visible = false;
+            transferir.Visible = false;
+            Cosignacion.Visible = false;
+            saldo.Visible = false;
+            fondos.Visible = false;
+            consigbtn.Visible = false;
+            consignacionbtn.Visible = false;
+            consglbl.Visible = false;
+            cuentadif.Visible = false;
+            label1.Visible = true;
+            regresarbtn2.Visible = true;
+            // Actualiza el saldo mostrado en el label
+
+        }
+        else
+        {
+            MessageBox.Show("Ingrese una cantidad válida para consignar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+    }
+    else
+    {
+        saldoconsult.Text = "Error: No se ha seleccionado una cuenta válida.";
+    }
+}
+
+private void label1_Click(object sender, EventArgs e)
+{
+
+}
+
+private void regresarbtn2_Click(object sender, EventArgs e)
+{
+    label1.Visible = false;
+    exit.Visible = true;
+    transferir.Visible = true;
+    Cosignacion.Visible = true;
+    saldo.Visible = true;
+    fondos.Visible = true;
+    consigbtn.Visible = false;
+    label1.Visible = false;
+    regresarbtn2.Visible = false;
+    lblbienvenido.Visible = true;
+    cuentadif.Visible = true;
+
+}
+
+
