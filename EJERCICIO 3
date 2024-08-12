@@ -7,6 +7,8 @@ namespace EJERCICIO_3_DSP
     public partial class Form1 : Form
     {
         private string textoCapturado;
+
+        //aquí esta es mi ruta de donde se iba a guardar el txt, (cambiarlo por su directorio)
         private string rutaArchivo = @"C:\Users\djcje\Desktop\EJERCICIO3 DSP\datos_tareas.txt";
 
         public Form1()
@@ -20,32 +22,31 @@ namespace EJERCICIO_3_DSP
             // Captura el texto actual del TextBox
             textoCapturado = textBox1.Text;
 
-            // Puedes realizar otras acciones con el texto, si es necesario
-            // Por ejemplo, mostrar el texto en la consola
+
             Console.WriteLine("Texto ingresado: " + textoCapturado);
         }
 
         private void btntarea_Click(object sender, EventArgs e)
         {
-            // Capturar el texto del TextBox
+
             string textoIngresado = textBox1.Text;
 
-            // Capturar la fecha del DateTimePicker
+
             DateTime fechaSeleccionada = dateTimePicker1.Value;
 
-            // Verificar que el texto no esté vacío
+
             if (!string.IsNullOrWhiteSpace(textoIngresado))
             {
-                // Crear una cadena que combine el texto y la fecha
+
                 string itemListBox = $"{textoIngresado} - {fechaSeleccionada.ToShortDateString()}";
 
-                // Agregar la cadena al ListBox
+                // 
                 listBox1.Items.Add(itemListBox);
 
-                // Limpiar el TextBox después de agregar el texto al ListBox
+                // Limpiar el TextBox después de agregar otra taraea
                 textBox1.Clear();
 
-                // Guardar los datos en el archivo
+                // guarda los datos en el txt
                 GuardarDatos();
             }
             else
@@ -57,7 +58,7 @@ namespace EJERCICIO_3_DSP
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
-            // Verificar que haya un ítem seleccionado en el ListBox
+            // verifica que se seleccione un dato del listbozx
             if (listBox1.SelectedItem != null)
             {
                 // Obtener el ítem seleccionado
@@ -66,16 +67,16 @@ namespace EJERCICIO_3_DSP
                 // Eliminar el ítem del ListBox
                 listBox1.Items.Remove(itemSeleccionado);
 
-                // Limpiar el TextBox y DateTimePicker después de eliminar
+                // para limpiar el TextBox y DateTimePicker
                 textBox1.Clear();
                 dateTimePicker1.Value = DateTime.Now;
 
-                // Guardar los datos en el archivo
+                // guarda los datos en el txt
                 GuardarDatos();
             }
             else
             {
-                // Mostrar un mensaje si no hay ítem seleccionado
+                // Mostrar un mensaje si no hay un ítem seleccionado
                 MessageBox.Show("Por favor, seleccione una tarea para eliminar.");
             }
         }
@@ -119,13 +120,12 @@ namespace EJERCICIO_3_DSP
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            // Este método puede estar vacío si solo necesitas capturar la fecha en el botón
-            // Si necesitas hacer algo con la fecha cuando cambia, puedes hacerlo aquí
+
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
             if (listBox1.SelectedItem != null)
             {
                 string texto = listBox1.SelectedItem.ToString();
@@ -164,6 +164,11 @@ namespace EJERCICIO_3_DSP
                     }
                 }
             }
+        }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
