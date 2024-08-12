@@ -56,6 +56,66 @@ namespace CajeroAutomatico
             textotransfer.Visible = false;
             cuentadif.Visible = false;
 
+        }
 
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void botoncont_Click(object sender, EventArgs e)
+        {
+
+            botoncont.Visible = false;
+            labelinicial.Visible = false;
+            label2.Visible = true;
+            textBox1.Visible = true;
+            botoncuenta.Visible = true;
+
+        }
+
+        private void labelinicial_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+
+
+
+        }
+
+        private void botoncuenta_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(textBox1.Text, out int accountNumber))
+            {
+                if (accountBalances.ContainsKey(accountNumber))
+                {
+                    label2.Visible = false;  // Oculta el mensaje de "Ingrese su número de cuenta"
+                    lblbienvenido.Visible = true;
+                    saldo.Visible = true;
+                    Cosignacion.Visible = true;
+                    transferir.Visible = true;
+                    fondos.Visible = true;
+                    textBox1.Visible = false;
+                    botoncuenta.Visible = false;
+                    exit.Visible = true;
+                    cuentadif.Visible = true;
+                    saldoconsult.Visible = false; // muestra el saldo
+
+                }
+                else
+                {
+                    // Mensaje si la cuenta es inválida
+                    MessageBox.Show("Número de cuenta inválido. Por favor, intente nuevamente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                // Mensaje si el input no es un número válido
+                MessageBox.Show("Por favor, ingrese un número de cuenta válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
