@@ -119,3 +119,108 @@ namespace CajeroAutomatico
                 MessageBox.Show("Por favor, ingrese un número de cuenta válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+private void lblbienvenido_Click(object sender, EventArgs e)
+{
+
+}
+
+private void saldo_Click(object sender, EventArgs e)
+{
+    if (int.TryParse(textBox1.Text, out int accountNumber) && accountBalances.ContainsKey(accountNumber))
+    {
+        decimal balance = accountBalances[accountNumber];
+        saldoconsult.Visible = true;
+        textodeco.Visible = false;
+        textBox2.Visible = false;
+        btnretirar.Visible = false;
+        retiroexit.Visible = false;
+        regresarbtn.Visible = false;
+        consignacionbtn.Visible = false;
+        consigbtn.Visible = false;
+        consglbl.Visible = false;
+        transferlbl.Visible = false;
+        transferbtn.Visible = false;
+        transfertxt.Visible = false;
+        numerocuenta.Visible = false;
+        textotransfer.Visible = false;
+        saldoconsult.Text = $"El saldo actual de la cuenta {accountNumber} es de: ${balance}";
+    }
+
+}
+
+private void Cosignacion_Click(object sender, EventArgs e)
+{
+    saldoconsult.Visible = false;
+    consignacionbtn.Visible = true;
+    consglbl.Visible = true;
+    textodeco.Visible = false;
+    textBox2.Visible = false;
+    btnretirar.Visible = false;
+    consigbtn.Visible = true;
+    transferlbl.Visible = false;
+    transferbtn.Visible = false;
+    transfertxt.Visible = false;
+    numerocuenta.Visible = false;
+    textotransfer.Visible = false;
+}
+
+private void transferir_Click(object sender, EventArgs e)
+{
+    transfertxt.Visible = true;
+    transferlbl.Visible = true;
+    transferbtn.Visible = true;
+    textodeco.Visible = false;
+    consglbl.Visible = false;
+    btnretirar.Visible = false;
+    textBox2.Visible = false;
+    consigbtn.Visible = false;
+    consignacionbtn.Visible = false;
+    saldoconsult.Visible = false;
+    numerocuenta.Visible = true;
+    textotransfer.Visible = true;
+
+}
+
+private void fondos_Click(object sender, EventArgs e)
+{
+    textodeco.Visible = true;
+    textBox2.Visible = true;
+    btnretirar.Visible = true;
+    saldoconsult.Visible = false;
+    regresarbtn.Visible = false;
+    retiroexit.Visible = false;
+    consignacionbtn.Visible = false;
+    consglbl.Visible = false;
+    consigbtn.Visible = false;
+    transferlbl.Visible = false;
+    transferbtn.Visible = false;
+    transfertxt.Visible = false;
+    numerocuenta.Visible = false;
+    textotransfer.Visible = false;
+}
+
+private void exit_Click(object sender, EventArgs e)
+{
+    lblbienvenido.Visible = false;
+    saldo.Visible = false;
+    Cosignacion.Visible = false;
+    transferir.Visible = false;
+    fondos.Visible = false;
+    exit.Visible = false;
+    textodeco.Visible = false;
+    textBox2.Visible = false;
+    btnretirar.Visible = false;
+    saldoconsult.Visible = false;
+    salirtexto.Visible = true;
+    salir1.Visible = true;
+    salir2.Visible = true;
+    consignacionbtn.Visible = false;
+    consglbl.Visible = false;
+    consigbtn.Visible = false;
+    transferlbl.Visible = false;
+    transferbtn.Visible = false;
+    transfertxt.Visible = false;
+    cuentadif.Visible = false;
+}
+
