@@ -1,13 +1,18 @@
+using System;
+using System.IO;
+using System.Windows.Forms;
+
 namespace EJERCICIO_3_DSP
 {
     public partial class Form1 : Form
-
     {
-
         private string textoCapturado;
+        private string rutaArchivo = @"C:\Users\djcje\Desktop\EJERCICIO3 DSP\datos_tareas.txt";
+
         public Form1()
         {
             InitializeComponent();
+            CargarDatos(); // Cargar datos al iniciar el formulario
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -39,18 +44,19 @@ namespace EJERCICIO_3_DSP
 
                 // Limpiar el TextBox después de agregar el texto al ListBox
                 textBox1.Clear();
+
+                // Guardar los datos en el archivo
+                GuardarDatos();
             }
             else
             {
                 // Opcional: Mostrar un mensaje si el TextBox está vacío
                 MessageBox.Show("Por favor, ingrese un texto antes de agregarlo.");
             }
-
         }
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
-
             // Verificar que haya un ítem seleccionado en el ListBox
             if (listBox1.SelectedItem != null)
             {
@@ -63,18 +69,19 @@ namespace EJERCICIO_3_DSP
                 // Limpiar el TextBox y DateTimePicker después de eliminar
                 textBox1.Clear();
                 dateTimePicker1.Value = DateTime.Now;
+
+                // Guardar los datos en el archivo
+                GuardarDatos();
             }
             else
             {
-                // mensaje que no se ha seleccionado alguna tarea
+                // Mostrar un mensaje si no hay ítem seleccionado
                 MessageBox.Show("Por favor, seleccione una tarea para eliminar.");
             }
-
         }
 
         private void btneditar_Click(object sender, EventArgs e)
         {
-
             // Verificar que haya un ítem seleccionado en el ListBox
             if (listBox1.SelectedItem != null)
             {
@@ -82,7 +89,7 @@ namespace EJERCICIO_3_DSP
                 string nuevoTexto = textBox1.Text;
                 DateTime nuevaFecha = dateTimePicker1.Value;
 
-                // verificar que no esté vacío el campo
+                // Verificar que el campo no esté vacío
                 if (!string.IsNullOrWhiteSpace(nuevoTexto))
                 {
                     // Crear una cadena que combine el texto y la fecha
@@ -91,31 +98,72 @@ namespace EJERCICIO_3_DSP
                     // Obtener el índice del ítem seleccionado
                     int indiceSeleccionado = listBox1.SelectedIndex;
 
-                    // actualizar la tarea
+                    // Actualizar la tarea
                     listBox1.Items[indiceSeleccionado] = nuevoItemListBox;
+
+                    // Guardar los datos en el archivo
+                    GuardarDatos();
                 }
                 else
                 {
-                    // mensaje si el textbox está vacío
+                    // Mostrar un mensaje si el TextBox está vacío
                     MessageBox.Show("Por favor, ingrese un texto antes de editar.");
                 }
             }
             else
             {
-                // mensaje que solicite que seleccione una tarea
+                // Mostrar un mensaje si no hay ítem seleccionado
                 MessageBox.Show("Por favor, seleccione una tarea para editar.");
             }
-
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-
+            // Este método puede estar vacío si solo necesitas capturar la fecha en el botón
+            // Si necesitas hacer algo con la fecha cuando cambia, puedes hacerlo aquí
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+            if (listBox1.SelectedItem != null)
+            {
+                string texto = listBox1.SelectedItem.ToString();
+                // para separar el texto de la fecha
+                string[] partes = texto.Split(new[] { " - " }, StringSplitOptions.None);
+                if (partes.Length == 2)
+                {
+                    textBox1.Text = partes[0];
+                    dateTimePicker1.Value = DateTime.Parse(partes[1]);
+                }
+            }
+        }
 
+        private void GuardarDatos()
+        {
+            // aquí se crea el archivo de los datos del listbox
+            using (StreamWriter escritor = new StreamWriter(rutaArchivo))
+            {
+                foreach (var item in listBox1.Items)
+                {
+                    escritor.WriteLine(item.ToString());
+                }
+            }
+        }
+
+        private void CargarDatos()
+        {
+            if (File.Exists(rutaArchivo))
+            {
+                using (StreamReader lector = new StreamReader(rutaArchivo))
+                {
+                    string linea;
+                    while ((linea = lector.ReadLine()) != null)
+                    {
+                        listBox1.Items.Add(linea);
+                    }
+                }
+            }
         }
     }
 }
