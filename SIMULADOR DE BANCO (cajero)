@@ -1,0 +1,61 @@
+namespace CajeroAutomatico
+{
+    public partial class Form1 : Form
+    {
+
+        private readonly Dictionary<int, decimal> accountBalances = new Dictionary<int, decimal>
+        {
+            { 1000001, 400 },
+            { 1000002, 200 },
+            { 1000004, 500 }
+        };
+
+        private decimal dinerodecuenta;
+        private decimal Depositocuenta;
+        private decimal amountToTransfer;
+        private int? targetAccountNumber;
+
+
+
+
+        public Form1()
+        {
+
+            //montón de instrucciones xd
+            //es para que se vayan ocultando los controles que no se estén usando 
+            //y se activen en cada cosa requerida :D
+
+            InitializeComponent();
+            textBox1.Visible = false;
+            botoncuenta.Visible = false;
+            label2.Visible = false;
+            lblbienvenido.Visible = false;
+            saldo.Visible = false;
+            Cosignacion.Visible = false;
+            transferir.Visible = false;
+            fondos.Visible = false;
+            exit.Visible = false;
+            salirtexto.Visible = false;
+            salir1.Visible = false;
+            salir2.Visible = false;
+            saldoconsult.Visible = false;
+            textodeco.Visible = false;
+            textBox2.Visible = false;
+            btnretirar.Visible = false;
+            retiroexit.Visible = false;
+            regresarbtn.Visible = false;
+            consignacionbtn.Visible = false;
+            consglbl.Visible = false;
+            consigbtn.Visible = false;
+            label1.Visible = false;
+            regresarbtn2.Visible = false;
+            transferlbl.Visible = false;
+            transferbtn.Visible = false;
+            transfertxt.Visible = false;
+            numerocuenta.Visible = false;
+            textotransfer.Visible = false;
+            cuentadif.Visible = false;
+
+
+
+        }
