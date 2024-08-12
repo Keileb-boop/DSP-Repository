@@ -1,0 +1,120 @@
+namespace EJERCICIO_3_DSP
+{
+    public partial class Form1 : Form
+
+    {
+
+        private string textoCapturado;
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            // Captura el texto actual del TextBox
+            textoCapturado = textBox1.Text;
+
+            // Puedes realizar otras acciones con el texto, si es necesario
+            // Por ejemplo, mostrar el texto en la consola
+            Console.WriteLine("Texto ingresado: " + textoCapturado);
+        }
+
+        private void btntarea_Click(object sender, EventArgs e)
+        {
+            // Capturar el texto del TextBox
+            string textoIngresado = textBox1.Text;
+
+            // Capturar la fecha del DateTimePicker
+            DateTime fechaSeleccionada = dateTimePicker1.Value;
+
+            // Verificar que el texto no esté vacío
+            if (!string.IsNullOrWhiteSpace(textoIngresado))
+            {
+                // Crear una cadena que combine el texto y la fecha
+                string itemListBox = $"{textoIngresado} - {fechaSeleccionada.ToShortDateString()}";
+
+                // Agregar la cadena al ListBox
+                listBox1.Items.Add(itemListBox);
+
+                // Limpiar el TextBox después de agregar el texto al ListBox
+                textBox1.Clear();
+            }
+            else
+            {
+                // Opcional: Mostrar un mensaje si el TextBox está vacío
+                MessageBox.Show("Por favor, ingrese un texto antes de agregarlo.");
+            }
+        }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+
+            // Verificar que haya un ítem seleccionado en el ListBox
+            if (listBox1.SelectedItem != null)
+            {
+                // Obtener el ítem seleccionado
+                var itemSeleccionado = listBox1.SelectedItem;
+
+                // Eliminar el ítem del ListBox
+                listBox1.Items.Remove(itemSeleccionado);
+
+                // Opcional: Limpiar el TextBox y DateTimePicker después de eliminar
+                textBox1.Clear();
+                dateTimePicker1.Value = DateTime.Now;
+            }
+            else
+            {
+                // Opcional: Mostrar un mensaje si no hay ítem seleccionado
+                MessageBox.Show("Por favor, seleccione una tarea para eliminar.");
+            }
+
+        }
+
+        private void btneditar_Click(object sender, EventArgs e)
+        {
+
+            // Verificar que haya un ítem seleccionado en el ListBox
+            if (listBox1.SelectedItem != null)
+            {
+                // Capturar el texto del TextBox y la fecha del DateTimePicker
+                string nuevoTexto = textBox1.Text;
+                DateTime nuevaFecha = dateTimePicker1.Value;
+
+                // Verificar que el texto no esté vacío
+                if (!string.IsNullOrWhiteSpace(nuevoTexto))
+                {
+                    // Crear una cadena que combine el texto y la fecha
+                    string nuevoItemListBox = $"{nuevoTexto} - {nuevaFecha.ToShortDateString()}";
+
+                    // Obtener el índice del ítem seleccionado
+                    int indiceSeleccionado = listBox1.SelectedIndex;
+
+                    // Actualizar el ítem en el ListBox
+                    listBox1.Items[indiceSeleccionado] = nuevoItemListBox;
+                }
+                else
+                {
+                    // Opcional: Mostrar un mensaje si el TextBox está vacío
+                    MessageBox.Show("Por favor, ingrese un texto antes de editar.");
+                }
+            }
+            else
+            {
+                // Opcional: Mostrar un mensaje si no hay ítem seleccionado
+                MessageBox.Show("Por favor, seleccione una tarea para editar.");
+            }
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
