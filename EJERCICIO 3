@@ -45,6 +45,7 @@ namespace EJERCICIO_3_DSP
                 // Opcional: Mostrar un mensaje si el TextBox está vacío
                 MessageBox.Show("Por favor, ingrese un texto antes de agregarlo.");
             }
+
         }
 
         private void btneliminar_Click(object sender, EventArgs e)
@@ -59,13 +60,13 @@ namespace EJERCICIO_3_DSP
                 // Eliminar el ítem del ListBox
                 listBox1.Items.Remove(itemSeleccionado);
 
-                // Opcional: Limpiar el TextBox y DateTimePicker después de eliminar
+                // Limpiar el TextBox y DateTimePicker después de eliminar
                 textBox1.Clear();
                 dateTimePicker1.Value = DateTime.Now;
             }
             else
             {
-                // Opcional: Mostrar un mensaje si no hay ítem seleccionado
+                // mensaje que no se ha seleccionado alguna tarea
                 MessageBox.Show("Por favor, seleccione una tarea para eliminar.");
             }
 
@@ -77,11 +78,11 @@ namespace EJERCICIO_3_DSP
             // Verificar que haya un ítem seleccionado en el ListBox
             if (listBox1.SelectedItem != null)
             {
-                // Capturar el texto del TextBox y la fecha del DateTimePicker
+                // Capturar el texto del TextBox y la fecha
                 string nuevoTexto = textBox1.Text;
                 DateTime nuevaFecha = dateTimePicker1.Value;
 
-                // Verificar que el texto no esté vacío
+                // verificar que no esté vacío el campo
                 if (!string.IsNullOrWhiteSpace(nuevoTexto))
                 {
                     // Crear una cadena que combine el texto y la fecha
@@ -90,18 +91,18 @@ namespace EJERCICIO_3_DSP
                     // Obtener el índice del ítem seleccionado
                     int indiceSeleccionado = listBox1.SelectedIndex;
 
-                    // Actualizar el ítem en el ListBox
+                    // actualizar la tarea
                     listBox1.Items[indiceSeleccionado] = nuevoItemListBox;
                 }
                 else
                 {
-                    // Opcional: Mostrar un mensaje si el TextBox está vacío
+                    // mensaje si el textbox está vacío
                     MessageBox.Show("Por favor, ingrese un texto antes de editar.");
                 }
             }
             else
             {
-                // Opcional: Mostrar un mensaje si no hay ítem seleccionado
+                // mensaje que solicite que seleccione una tarea
                 MessageBox.Show("Por favor, seleccione una tarea para editar.");
             }
 
