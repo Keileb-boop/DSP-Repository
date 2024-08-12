@@ -321,7 +321,132 @@ private void regresarbtn2_Click(object sender, EventArgs e)
     regresarbtn2.Visible = false;
     lblbienvenido.Visible = true;
     cuentadif.Visible = true;
-
 }
+
+        private void transferlbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void transferbtn_Click(object sender, EventArgs e)
+        {
+            // Verifica si se ingresó un número de cuenta válido para la cuenta destino
+            if (targetAccountNumber.HasValue && accountBalances.ContainsKey(targetAccountNumber.Value))
+            {
+                // Verifica si se ingresó una cantidad válida para transferir
+                if (amountToTransfer > 0)
+                {
+                    // Verifica que la cuenta de origen tenga suficientes fondos
+                    if (int.TryParse(textBox1.Text, out int sourceAccountNumber) && accountBalances.ContainsKey(sourceAccountNumber))
+                    {
+                        decimal currentBalance = accountBalances[sourceAccountNumber];
+
+                        if (currentBalance >= amountToTransfer)
+                        {
+                            // Resta la cantidad de la cuenta de origen
+                            accountBalances[sourceAccountNumber] -= amountToTransfer;
+
+                            // Suma la cantidad a la cuenta destino
+                            accountBalances[targetAccountNumber.Value] += amountToTransfer;
+
+                            // Muestra un mensaje de éxito
+                            MessageBox.Show($"Transferencia exitosa. Se han transferido ${amountToTransfer} de la cuenta {sourceAccountNumber} a la cuenta {targetAccountNumber.Value}.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Fondos insuficientes en la cuenta de origen para completar la transferencia.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Número de cuenta de origen inválido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, ingrese una cantidad válida para transferir.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Número de cuenta destino inválido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+
+        }
+
+        private void transfertxt_TextChanged(object sender, EventArgs e)
+        {
+            if (decimal.TryParse(transfertxt.Text, out decimal amount))
+            {
+                amountToTransfer = amount;
+            }
+            else
+            {
+                amountToTransfer = 0;
+                MessageBox.Show("Por favor, ingrese una cantidad válida en dólares.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void numerocuenta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textotransfer_TextChanged(object sender, EventArgs e)
+        {
+            // Intenta convertir el texto ingresado en un número entero y lo almacena
+            if (int.TryParse(textotransfer.Text, out int accountNumber))
+            {
+                targetAccountNumber = accountNumber;
+            }
+            else
+            {
+                targetAccountNumber = null;
+            }
+
+        }
+
+        private void cuentadif_Click(object sender, EventArgs e)
+        {
+
+            // mas montón de cosas
+            lblbienvenido.Visible = false;
+            saldo.Visible = false;
+            Cosignacion.Visible = false;
+            transferir.Visible = false;
+            fondos.Visible = false;
+            exit.Visible = false;
+            saldoconsult.Visible = false;
+            textodeco.Visible = false;
+            textBox2.Visible = false;
+            btnretirar.Visible = false;
+            retiroexit.Visible = false;
+            regresarbtn.Visible = false;
+            consignacionbtn.Visible = false;
+            consglbl.Visible = false;
+            consigbtn.Visible = false;
+            label1.Visible = false;
+            regresarbtn2.Visible = false;
+            transferlbl.Visible = false;
+            transferbtn.Visible = false;
+            transfertxt.Visible = false;
+            numerocuenta.Visible = false;
+            textotransfer.Visible = false;
+            cuentadif.Visible = false;
+
+
+            //muestra el inicio saliendose de todo
+
+            label2.Visible = true;  
+            textBox1.Visible = true; 
+            botoncuenta.Visible = true;
+
+        }
+    }
+}
+
+
 
 
