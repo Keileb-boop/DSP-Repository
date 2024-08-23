@@ -1,0 +1,16 @@
+C:\Users\djcje\Desktop\EJERCICIO3 DSP\EJERCICIO 3 DSP\EJERCICIO 3 DSP\obj\Debug\net8.0-windows\EJERCICIO_3_DSP.Form1.resources
+C:\Users\djcje\Desktop\EJERCICIO3 DSP\EJERCICIO 3 DSP\EJERCICIO 3 DSP\obj\Debug\net8.0-windows\EJERCICIO 3 DSP.csproj.GenerateResource.cache
+C:\Users\djcje\Desktop\EJERCICIO3 DSP\EJERCICIO 3 DSP\EJERCICIO 3 DSP\obj\Debug\net8.0-windows\EJERCICIO 3 DSP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\djcje\Desktop\EJERCICIO3 DSP\EJERCICIO 3 DSP\EJERCICIO 3 DSP\obj\Debug\net8.0-windows\EJERCICIO 3 DSP.AssemblyInfoInputs.cache
+C:\Users\djcje\Desktop\EJERCICIO3 DSP\EJERCICIO 3 DSP\EJERCICIO 3 DSP\obj\Debug\net8.0-windows\EJERCICIO 3 DSP.AssemblyInfo.cs
+C:\Users\djcje\Desktop\EJERCICIO3 DSP\EJERCICIO 3 DSP\EJERCICIO 3 DSP\obj\Debug\net8.0-windows\EJERCICIO 3 DSP.csproj.CoreCompileInputs.cache
+C:\Users\djcje\Desktop\EJERCICIO3 DSP\EJERCICIO 3 DSP\EJERCICIO 3 DSP\bin\Debug\net8.0-windows\EJERCICIO 3 DSP.exe
+C:\Users\djcje\Desktop\EJERCICIO3 DSP\EJERCICIO 3 DSP\EJERCICIO 3 DSP\bin\Debug\net8.0-windows\EJERCICIO 3 DSP.deps.json
+C:\Users\djcje\Desktop\EJERCICIO3 DSP\EJERCICIO 3 DSP\EJERCICIO 3 DSP\bin\Debug\net8.0-windows\EJERCICIO 3 DSP.runtimeconfig.json
+C:\Users\djcje\Desktop\EJERCICIO3 DSP\EJERCICIO 3 DSP\EJERCICIO 3 DSP\bin\Debug\net8.0-windows\EJERCICIO 3 DSP.dll
+C:\Users\djcje\Desktop\EJERCICIO3 DSP\EJERCICIO 3 DSP\EJERCICIO 3 DSP\bin\Debug\net8.0-windows\EJERCICIO 3 DSP.pdb
+C:\Users\djcje\Desktop\EJERCICIO3 DSP\EJERCICIO 3 DSP\EJERCICIO 3 DSP\obj\Debug\net8.0-windows\EJERCICIO 3 DSP.dll
+C:\Users\djcje\Desktop\EJERCICIO3 DSP\EJERCICIO 3 DSP\EJERCICIO 3 DSP\obj\Debug\net8.0-windows\refint\EJERCICIO 3 DSP.dll
+C:\Users\djcje\Desktop\EJERCICIO3 DSP\EJERCICIO 3 DSP\EJERCICIO 3 DSP\obj\Debug\net8.0-windows\EJERCICIO 3 DSP.pdb
+C:\Users\djcje\Desktop\EJERCICIO3 DSP\EJERCICIO 3 DSP\EJERCICIO 3 DSP\obj\Debug\net8.0-windows\EJERCICIO 3 DSP.genruntimeconfig.cache
+C:\Users\djcje\Desktop\EJERCICIO3 DSP\EJERCICIO 3 DSP\EJERCICIO 3 DSP\obj\Debug\net8.0-windows\ref\EJERCICIO 3 DSP.dll
