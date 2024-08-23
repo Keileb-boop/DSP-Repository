@@ -1,0 +1,16 @@
+C:\Users\djcje\Desktop\Cajero automatico TEST\CajeroAutomatico\CajeroAutomatico\bin\Debug\net8.0-windows\CajeroAutomatico.exe
+C:\Users\djcje\Desktop\Cajero automatico TEST\CajeroAutomatico\CajeroAutomatico\bin\Debug\net8.0-windows\CajeroAutomatico.deps.json
+C:\Users\djcje\Desktop\Cajero automatico TEST\CajeroAutomatico\CajeroAutomatico\bin\Debug\net8.0-windows\CajeroAutomatico.runtimeconfig.json
+C:\Users\djcje\Desktop\Cajero automatico TEST\CajeroAutomatico\CajeroAutomatico\bin\Debug\net8.0-windows\CajeroAutomatico.dll
+C:\Users\djcje\Desktop\Cajero automatico TEST\CajeroAutomatico\CajeroAutomatico\bin\Debug\net8.0-windows\CajeroAutomatico.pdb
+C:\Users\djcje\Desktop\Cajero automatico TEST\CajeroAutomatico\CajeroAutomatico\obj\Debug\net8.0-windows\CajeroAutomatico.Form1.resources
+C:\Users\djcje\Desktop\Cajero automatico TEST\CajeroAutomatico\CajeroAutomatico\obj\Debug\net8.0-windows\CajeroAutomatico.csproj.GenerateResource.cache
+C:\Users\djcje\Desktop\Cajero automatico TEST\CajeroAutomatico\CajeroAutomatico\obj\Debug\net8.0-windows\CajeroAutomatico.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\djcje\Desktop\Cajero automatico TEST\CajeroAutomatico\CajeroAutomatico\obj\Debug\net8.0-windows\CajeroAutomatico.AssemblyInfoInputs.cache
+C:\Users\djcje\Desktop\Cajero automatico TEST\CajeroAutomatico\CajeroAutomatico\obj\Debug\net8.0-windows\CajeroAutomatico.AssemblyInfo.cs
+C:\Users\djcje\Desktop\Cajero automatico TEST\CajeroAutomatico\CajeroAutomatico\obj\Debug\net8.0-windows\CajeroAutomatico.csproj.CoreCompileInputs.cache
+C:\Users\djcje\Desktop\Cajero automatico TEST\CajeroAutomatico\CajeroAutomatico\obj\Debug\net8.0-windows\CajeroAutomatico.dll
+C:\Users\djcje\Desktop\Cajero automatico TEST\CajeroAutomatico\CajeroAutomatico\obj\Debug\net8.0-windows\refint\CajeroAutomatico.dll
+C:\Users\djcje\Desktop\Cajero automatico TEST\CajeroAutomatico\CajeroAutomatico\obj\Debug\net8.0-windows\CajeroAutomatico.pdb
+C:\Users\djcje\Desktop\Cajero automatico TEST\CajeroAutomatico\CajeroAutomatico\obj\Debug\net8.0-windows\CajeroAutomatico.genruntimeconfig.cache
+C:\Users\djcje\Desktop\Cajero automatico TEST\CajeroAutomatico\CajeroAutomatico\obj\Debug\net8.0-windows\ref\CajeroAutomatico.dll
