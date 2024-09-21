@@ -1,0 +1,10 @@
+D:\UDB\2024\CICLO II\DSP\lab\Guia4\Ejercicio2\bin\Debug\Ejercicio2.exe.config
+D:\UDB\2024\CICLO II\DSP\lab\Guia4\Ejercicio2\bin\Debug\Ejercicio2.exe
+D:\UDB\2024\CICLO II\DSP\lab\Guia4\Ejercicio2\bin\Debug\Ejercicio2.pdb
+D:\UDB\2024\CICLO II\DSP\lab\Guia4\Ejercicio2\obj\Debug\Ejercicio2.csprojAssemblyReference.cache
+D:\UDB\2024\CICLO II\DSP\lab\Guia4\Ejercicio2\obj\Debug\Ejercicio2.Form1.resources
+D:\UDB\2024\CICLO II\DSP\lab\Guia4\Ejercicio2\obj\Debug\Ejercicio2.Properties.Resources.resources
+D:\UDB\2024\CICLO II\DSP\lab\Guia4\Ejercicio2\obj\Debug\Ejercicio2.csproj.GenerateResource.cache
+D:\UDB\2024\CICLO II\DSP\lab\Guia4\Ejercicio2\obj\Debug\Ejercicio2.csproj.CoreCompileInputs.cache
+D:\UDB\2024\CICLO II\DSP\lab\Guia4\Ejercicio2\obj\Debug\Ejercicio2.exe
+D:\UDB\2024\CICLO II\DSP\lab\Guia4\Ejercicio2\obj\Debug\Ejercicio2.pdb
