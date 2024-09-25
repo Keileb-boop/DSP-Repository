@@ -1,0 +1,42 @@
+@page
+@model Aplicacionwebtst.Pages.usuarios.login1Model
+@{
+}
+
+<br/>
+<h2>Lista de clientes </h2>
+<a class='btn btn-primary btn-sm' href='/usuarios/Crear'>Nuevo Cliente</a>
+<table class="tabla">
+<thead>
+    <tr>
+        <th>ClienteID</th>
+        <th>Nombre</th>
+        <th>Usuario</th>
+        <th>Contraseña</th>
+        <th>Email</th>
+        <th>Creado en</th>
+        <th>Accion</th>
+    </tr>
+</thead>
+<tbody>
+
+    @foreach(var item in Model.listClientes)
+        {
+            <tr>
+                <td>@item.ClienteID</td>
+                <td>@item.Nombre</td>
+                <td>@item.Usuario</td>
+                <td>@item.Contrasena</td>
+                <td>@item.Email</td>
+                <td>@item.creardonde</td>
+                <td>
+                    <a class="btn btn-primary btn-sm" href="/usuarios/editar?ClienteID=@item.ClienteID">Editar</a>
+                    <a class="btn btn-primary btn-sm" href="/usuarios/borrar?ClienteID=@item.ClienteID">Borrar</a>
+                </td>
+            </tr>
+
+
+        }
+
+</tbody>
+</table>
