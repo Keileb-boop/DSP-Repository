@@ -1,0 +1,61 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Data;
+using System.Data.SqlClient;
+
+namespace Aplicacionwebtst.Pages.usuarios
+{
+    public class login1Model : PageModel
+    {
+        public List<Clientes> listClientes = new List<Clientes>();
+
+        public void OnGet()
+        {
+            try
+            {
+                String connectionString = "Data Source=.\\SQLSERVER;Initial Catalog=restauranteBD;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
+
+                using (SqlConnection conecction = new SqlConnection(connectionString))
+                {
+                    conecction.Open();
+                    String sql = "SELECT * FROM Clientes";
+                    using (SqlCommand command = new SqlCommand(sql, conecction))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Clientes clientes = new Clientes();
+                                clientes.ClienteID = "" + reader.GetInt32(0);
+                                clientes.Nombre = reader.GetString(1);
+                                clientes.Usuario = reader.GetString(2);
+                                clientes.Contrasena = reader.GetString(3);
+                                clientes.Email = reader.GetString(4);
+                                clientes.creardonde = reader.GetDateTime(5).ToString();
+
+                                listClientes.Add(clientes);
+
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                
+                Console.WriteLine("Exception: " + ex.ToString());
+                
+            }
+        }
+
+        public class Clientes
+        {
+            public String ClienteID;
+            public String Nombre;
+            public String Usuario;
+            public String Contrasena;
+            public String Email;
+            public String creardonde;
+        }
+    }
+}
