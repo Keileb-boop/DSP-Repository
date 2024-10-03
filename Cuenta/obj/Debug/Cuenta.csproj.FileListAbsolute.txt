@@ -1,0 +1,10 @@
+C:\Users\Cami\Desktop\dsp\guia5\Cuenta\bin\Debug\Cuenta.exe.config
+C:\Users\Cami\Desktop\dsp\guia5\Cuenta\bin\Debug\Cuenta.exe
+C:\Users\Cami\Desktop\dsp\guia5\Cuenta\bin\Debug\Cuenta.pdb
+C:\Users\Cami\Desktop\dsp\guia5\Cuenta\obj\Debug\Cuenta.csprojAssemblyReference.cache
+C:\Users\Cami\Desktop\dsp\guia5\Cuenta\obj\Debug\Cuenta.Form1.resources
+C:\Users\Cami\Desktop\dsp\guia5\Cuenta\obj\Debug\Cuenta.Properties.Resources.resources
+C:\Users\Cami\Desktop\dsp\guia5\Cuenta\obj\Debug\Cuenta.csproj.GenerateResource.cache
+C:\Users\Cami\Desktop\dsp\guia5\Cuenta\obj\Debug\Cuenta.csproj.CoreCompileInputs.cache
+C:\Users\Cami\Desktop\dsp\guia5\Cuenta\obj\Debug\Cuenta.exe
+C:\Users\Cami\Desktop\dsp\guia5\Cuenta\obj\Debug\Cuenta.pdb
