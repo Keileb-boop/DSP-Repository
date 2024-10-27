@@ -1,0 +1,143 @@
+@{
+    Layout = null; // Asegúrate de que no se use ningún layout
+}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Concierto</title>
+    <style>
+        /* Estilo para el formulario de concierto */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #0D0F1A;
+            color: #EDEDED;
+        }
+
+        .concert-container {
+            margin: 60px auto;
+            padding: 40px;
+            max-width: 700px;
+            background-color: #1C1E2B;
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            color: #D4AF37;
+            margin-bottom: 30px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: #CCCCCC;
+        }
+
+        input[type="text"], input[type="date"], input[type="number"], textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            border: 1px solid #555;
+            border-radius: 10px;
+            background-color: #282C3D;
+            color: #fff;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .column {
+            flex: 1;
+        }
+
+        button {
+            background-color: #D4AF37;
+            color: #1C1E2B;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 30px;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+            button:hover {
+                background-color: #B8860B;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="concert-container">
+        <h1>Registrar Concierto</h1>
+        <form id="concertForm">
+            <label for="nombre">Nombre del concierto</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe el nombre del evento" required>
+
+            <label for="artista">Artista principal</label>
+            <input type="text" id="artista" name="artista" placeholder="Escribe el nombre del artista principal" required>
+
+            <label for="fecha">Fecha del concierto</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="lugar">Lugar del concierto</label>
+            <input type="text" id="lugar" name="lugar" placeholder="Ciudad o sala de conciertos" required>
+
+            <label for="descripcion">Descripción del evento</label>
+            <textarea id="descripcion" name="descripcion" placeholder="Breve descripción del concierto"></textarea>
+
+            <div class="row">
+                <div class="column">
+                    <label for="aforo">Capacidad de asistentes</label>
+                    <input type="number" id="aforo" name="aforo" min="1" placeholder="Número de asistentes" required>
+                </div>
+                <div class="column">
+                    <label for="precio">Precio de la entrada</label>
+                    <input type="number" id="precio" name="precio" min="0" step="0.01" placeholder="Precio por entrada" required>
+                </div>
+            </div>
+
+            <button type="submit">Registrar Concierto</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('concertForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const concierto = {
+                nombre: document.getElementById('nombre').value,
+                artista: document.getElementById('artista').value,
+                fecha: document.getElementById('fecha').value,
+                lugar: document.getElementById('lugar').value,
+                descripcion: document.getElementById('descripcion').value,
+                aforo: parseInt(document.getElementById('aforo').value),
+                precio: parseFloat(document.getElementById('precio').value)
+            };
+
+            const conciertos = JSON.parse(localStorage.getItem('conciertos')) || [];
+            conciertos.push(concierto);
+            localStorage.setItem('conciertos', JSON.stringify(conciertos));
+
+            window.location.href = '/Home/listaconciertos';
+        });
+    </script>
+</body>
