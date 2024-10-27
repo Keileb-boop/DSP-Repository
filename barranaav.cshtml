@@ -1,0 +1,116 @@
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PaginasDSP</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navbar-left">
+                <li><a href="@Url.Action("Index", "Home")"><img src="~/img/Beige y Café Clásico Circular Moda Fashion Logo.png" alt="Inicio" style="height: 50px;" /></a></li>
+            </ul>
+            <ul class="navbar-right">
+                <li><a asp-controller="Home" asp-action="Index">Inicio</a></li>
+                <li><a asp-controller="Home" asp-action="conciertoadd">Agregar concierto</a></li>
+                <li><a asp-controller="Home" asp-action="Enciclo1">Agregar Enciclopedia</a></li>
+                <li><a asp-controller="Home" asp-action="Revista">Agregar Revista</a></li>
+                <li><a asp-controller="Home" asp-action="Tesis">Agregar Tesis</a></li>
+                <li><a asp-controller="Home" asp-action="Dvds">Agregar DVD's</a></li>
+                <li><a asp-controller="Home" asp-action="Buscar">Listar recursos</a></li>
+                <li><a href="@Url.Action("carritocomp", "Home")"><img src="~/img/carrito.png" alt="Inicio" style="height: 50px;" /></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección condicional -->
+    @RenderSection("mainContent", required: false)
+
+    <!-- Contenido de la página va aquí -->
+    <div class="container">
+        <h1>Bienvenido a la gestión de recursos</h1>
+        <p>Este es el contenido principal de la página.</p>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+
+<!-- Estilos -->
+<style>
+    /* Estilos generales */
+    body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #fff;
+        color: #000;
+    }
+
+    /* Estilo de la barra de navegación */
+    .navbar {
+        background-color: #064897;
+        padding: 25px;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .navbar-left li {
+        margin-right: 20px;
+    }
+
+    .navbar-right li {
+        margin-left: 15px; /* Separar los elementos a la derecha */
+    }
+
+    .navbar li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2em;
+        padding: 10px;
+        display: inline-block;
+        transition: background-color 0.3s;
+        border-radius: 2em;
+    }
+
+    /* Aplicar hover solo al enlace, sin cambiar el tamaño */
+    .navbar li a:hover {
+            background-color: #1f71d3;
+        border-radius: 2em;
+    }
+
+    /* Estilo del contenido principal */
+    .main-content {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    h1 {
+        font-size: 3em;
+        margin-bottom: 40px;
+    }
+</style>
+
+
+
