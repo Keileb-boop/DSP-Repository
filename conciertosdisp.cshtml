@@ -1,3 +1,37 @@
 @{
-    Layout = null; // Asegúrate de que no se use ningún layout
+    Layout = null; // pa quitar el layout 
 }
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Conciertos</title>
+    <link href="~/css/dashboaard.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="concert-container">
+        <h1>Conciertos Registrados</h1>
+        <table id="concertsTable">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Artista</th>
+                    <th>Fecha</th>
+                    <th>Lugar</th>
+                    <th>Capacidad</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <script src="~/js/dashboardjs.js"></script>
+
+</body>
+</html>
