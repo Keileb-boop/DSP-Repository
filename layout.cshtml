@@ -7,54 +7,33 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <style>
-        /* Estilo para el fondo y el navbar */
+        
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
             background-color: #fff;
             color: #000;
-            background-image: url('img/concierto.jpg'); /* Especifica la ruta a tu imagen */
-            background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
-            background-repeat: no-repeat; /* Evita que la imagen se repita */
-            background-position: center; /* Centra la imagen */
+            background-image: url('img/concierto.jpg'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center; 
         }
 
-        .navbar {
-            background-color: #064897;
+        .header-container {
+            background-color: #064897; 
             padding: 25px;
-            text-align: left;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            text-align: center; 
+            margin: 0 auto; 
+            width: 100%; 
         }
 
-            .navbar ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                display: flex;
+            .header-container h1 {
+                color: #fff; 
+                margin: 0; 
+                font-size: 44px; 
             }
 
-        .navbar-right li {
-            margin-left: 15px;
-        }
-
-        .navbar li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.2em;
-            padding: 10px;
-            display: inline-block;
-            transition: background-color 0.3s;
-            border-radius: 2em;
-        }
-
-            .navbar li a:hover {
-                background-color: #1f71d3;
-                border-radius: 2em;
-            }
-
-        /* Estilo para el formulario de inicio de sesión */
+        
         .login-container {
             margin: 60px auto;
             padding: 40px;
@@ -124,12 +103,9 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <ul class="navbar-right">
-                <li><a asp-controller="Home" asp-action="Index">Inicio</a></li>
-                <li><a asp-controller="Home" asp-action="conciertoadd">Agregar concierto</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <h1>Conciertos Chihuahua</h1>
+        </div>
     </header>
 
     <div class="login-container">
@@ -150,30 +126,7 @@
     </div>
 
     <script>
-        document.getElementById('loginForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-
-            // Verificar credenciales (simulado)
-            if (username === 'admin' && password === '12345') {
-                alert('Inicio de sesión exitoso como admin');
-                window.location.href = '/Home/conciertoadd';
-            } else if (username === 'caleb@gmail.com' && password === 'calebpenate2003') {
-                // Para un usuario cualquiera
-                alert('Inicio de sesión exitoso como usuario');
-                window.location.href = '/Home/usuariopag';
-            } 
-            else if (username === 'camil@gmail.com' && password === 'camocastillo') {
-                // Para un usuario cualquiera
-                alert('Inicio de sesión exitoso como usuario');
-                window.location.href = '/Home/usuariopag';
-            }
-            else {
-                alert('Usuario o contraseña incorrectos');
-            }
-        });
+        
     </script>
 
     <div class="container">
@@ -185,6 +138,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/logueojasjd.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
