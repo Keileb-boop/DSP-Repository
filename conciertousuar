@@ -1,5 +1,31 @@
 @{
-  Layout = null;
+    Layout = null;
 }
 
-si xd
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conciertos Disponibles</title>
+    <link href="~/css/cuadrosusuar.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navbar-left">
+                
+                <li><a asp-controller="Home" asp-action="usuariopag">Inicio</a></li>
+                <li><a asp-controller="Home" asp-action="conciertosusuar">Ver conciertos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="concerts-container">
+        <div class="texto" >
+        <h1>Conciertos Disponibles</h1>
+        </div>
+        <div id="concerts"></div>
+    </div>
+
+    <script src="~/js/registrodeusuariooo1.js"></script>
+</body>
