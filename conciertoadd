@@ -1,5 +1,5 @@
 @{
-    Layout = null; // Asegúrate de que no se use ningún layout
+    Layout = null; 
 }
 
 <head>
@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agregar Concierto</title>
     <style>
-        /* Estilo para el formulario de concierto */
+        
         body {
             margin: 0;
             padding: 0;
@@ -117,6 +117,9 @@
 
             <button type="submit">Registrar Concierto</button>
         </form>
+
+      <!--Botón para rir al dasghboard-->
+        <button id="nuevoBoton">Ir al Dashboard</button> 
     </div>
 
     <script>
@@ -137,7 +140,12 @@
             conciertos.push(concierto);
             localStorage.setItem('conciertos', JSON.stringify(conciertos));
 
-            window.location.href = '/Home/listaconciertos';
+            window.location.href = '/Home/conciertosdisp'; 
+        });
+
+        
+        document.getElementById('nuevoBoton').addEventListener('click', function () {
+            window.location.href = '/Home/conciertosdisp';
         });
     </script>
 </body>
